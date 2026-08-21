@@ -7,27 +7,27 @@ st.set_page_config(
     layout="wide"
 )
 
-# Estilos CSS
+# Estilos CSS corregidos
 st.markdown("""
 <style>
-    /* Fondo general */
+    /* Fondo crema general */
     .stApp {
         background-color: #F4EBE1;
     }
     
-    /* Tarjeta principal que envuelve todo */
+    /* Tarjeta principal en BLANCO puro */
     [data-testid="stVerticalBlockBorderWrapper"] {
-        background-color: #F0EAE1 !important;
+        background-color: #FFFFFF !important;
         border-radius: 20px !important;
-        border: 1px solid #D8CDBF !important;
-        padding: 30px !important;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        border: 1px solid #E5DCD0 !important;
+        padding: 35px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
     }
 
-    /* Estilo de los inputs */
+    /* Campos de entrada */
     div[data-baseweb="input"] {
         border-radius: 8px !important;
-        background-color: #F0F2F6 !important;
+        background-color: #F5F6F8 !important;
     }
 
     /* Botón borgoña */
@@ -46,14 +46,14 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Contenedor único para todo el formulario e ilustración
+# Tarjeta contenedora blanca
 with st.container(border=True):
-    # Encabezado: Título a la izquierda + Taxi a la derecha
+    # Cabecera: Título a la izquierda + Taxi a la derecha
     c_title, c_taxi = st.columns([2.5, 1])
     with c_title:
-        st.markdown("<h1 style='color: #2A0812; font-weight: 900; margin-top: 20px; font-size: 2.5rem;'>TAXI FARE PREDICTION</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='color: #2A0812; font-weight: 900; margin-top: 15px; font-size: 2.4rem;'>TAXI FARE PREDICTION</h1>", unsafe_allow_html=True)
     with c_taxi:
-        st.image("taxi_ilustration.png", width=240)
+        st.image("taxi_ilustration.png", width=220)
 
     st.write("---")
 
